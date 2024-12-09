@@ -4,6 +4,7 @@ import { SignIn } from "./components/SignIn";
 import { SignUp } from "./components/SignUp";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "./firebase/config";
+import { SignInWithGoogle } from "./components/SignInWithGoogle";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -28,6 +29,10 @@ function App() {
         <br />
         <br />
         <SignIn />
+        <br />
+        <h1>OR</h1>
+
+        <SignInWithGoogle/>
       </>
     );
   }
